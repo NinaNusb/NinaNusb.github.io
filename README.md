@@ -1,5 +1,5 @@
 
-# Nina Nusbaumer
+
 
 ## About Me
 I am a PhD student specializing in computational psycholinguistics and cognitive science. My research focuses on human-inspired sentence processing in language models. I am passionate about discovering more about the intricate system of language.
