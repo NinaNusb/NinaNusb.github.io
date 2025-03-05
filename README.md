@@ -6,13 +6,13 @@ I am a PhD student specializing in computational psycholinguistics and cognitive
 
 ## Education
 - **PhD in Computational Linguistics**
-  - [Laboratoire de Linguistique Formelle (LLF), Université Paris Cité], [2024] - Present
+  - Laboratoire de Linguistique Formelle (LLF), Université Paris Cité, 2024 - Present
 - **Master's in Language Science**
-  - Université Paris Cité, [2024]
+  - Université Paris Cité, 2024
 - **Master's in Multilingual Communication**
-  - Université de Liège & Universidad Complutense de Madrid, [2022]
+  - Université de Liège & Universidad Complutense de Madrid, 2022
 - **Bachelor's in Philology**
-  - Aix-marseille Université & Universität Leipzig, [2019]
+  - Aix-marseille Université & Universität Leipzig, 2019
 
 ## Research Interests
 - [Interest 1]
@@ -21,7 +21,7 @@ I am a PhD student specializing in computational psycholinguistics and cognitive
 
 ## Communications
 - **[Assessing the import of morphology in gender assignment: A computational study of French]**
-  - [LLcD], [2024]
+  - LLcD, 2024
   - Shafiabadi, N., **Nusbaumer, N.**, Bonami, O.
 
 
