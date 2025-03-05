@@ -19,8 +19,8 @@ I am a PhD student specializing in computational psycholinguistics and cognitive
 - [Interest 2]
 - [Interest 3]
 
-## Communications
-- **[Assessing the import of morphology in gender assignment: A computational study of French]**
+## Communications (with peer-reviewed abstract)
+- **Assessing the import of morphology in gender assignment: A computational study of French**
   - LLcD, 2024
   - Shafiabadi, N., **Nusbaumer, N.**, Bonami, O.
 
