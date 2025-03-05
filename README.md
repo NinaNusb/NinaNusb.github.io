@@ -16,8 +16,7 @@ I am a PhD student specializing in computational psycholinguistics and machine l
 - Psycholinguistics and cognitive neuroscience of language 
 
 ## Communications (with peer-reviewed abstract)
-- Shafiabadi, N., **Nusbaumer, N.**, Bonami, O., Assessing the import of morphology in gender assignment: A computational study of French
-  -  [LLcD](https://llcd2024.sciencesconf.org), 2024.
+- Shafiabadi, N., **Nusbaumer, N.**, Bonami, O., _Assessing the import of morphology in gender assignment: A computational study of French_, [LLcD](https://llcd2024.sciencesconf.org), 2024.
 
 ## Research Stays
 - Visiting researcher at Computational Linguistics and Linguistic Theory ([COLT](https://www.upf.edu/web/colt)), Universitat Pompeu Fabra, Barcelona, Spain (January 2025 - ) 
