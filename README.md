@@ -2,7 +2,7 @@
 
 
 ## About Me
-I am a PhD student specializing in computational psycholinguistics and machine learning. My research focuses on human-inspired sentence processing in language models. I am passionate about discovering more about the intricate system of language. My PhD is part of the ANR-funded project [COMPO](https://anr-compo.github.io) and I work at the [Laboratoire de Linguistique Formelle (LLF)](http://www.llf.cnrs.fr/fr/presentation), Université Paris Cité under the supervision of Benoît Crabbé and Guillaume Wisniewski.
+I am a PhD student specializing in computational psycholinguistics and machine learning. My research focuses on human-inspired sentence processing in language models. I am passionate about discovering more about the intricate system of language. My PhD is part of the ANR-funded project [COMPO](https://anr-compo.github.io) and I work at the [Laboratoire de Linguistique Formelle (LLF)](http://www.llf.cnrs.fr/fr/presentation), [Université Paris Cité](https://u-paris.fr) under the supervision of **Benoît Crabbé** and **Guillaume Wisniewski**.
 
 ## Education
 - MA (Res) in Computational Linguistics, Université Paris Cité, France
