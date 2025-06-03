@@ -28,9 +28,6 @@ I am a PhD student specializing in computational psycholinguistics and machine l
 ## Research Stays
 - Visiting researcher at Computational Linguistics and Linguistic Theory ([COLT](https://www.upf.edu/web/colt)), Universitat Pompeu Fabra, Barcelona, 🇪🇸 (January 2025 - ) 
 
-## Ongoing Collaboration
-- Collaborating with [Adele Goldberg](https://scholar.google.com/citations?user=aK42DkQAAAAJ&hl=fr&oi=ao).
-
 ## Contact
 - **Email:** first.last@gmail.com
 - [![LinkedIn](https://img.shields.io/badge/LinkedIn-Profile-black?logo=linkedin)](https://fr.linkedin.com/in/nina-nusbaumer-752aab182/en)
