@@ -33,8 +33,8 @@ I am a PhD student specializing in computational psycholinguistics and machine l
 
 ## Contact
 - **Email:** first.last@gmail.com
-- [![LinkedIn](https://img.shields.io/badge/LinkedIn-Profile-blue?logo=linkedin)](https://fr.linkedin.com/in/nina-nusbaumer-752aab182/en)
+- [![LinkedIn](https://img.shields.io/badge/LinkedIn-Profile-black?logo=linkedin)](https://fr.linkedin.com/in/nina-nusbaumer-752aab182/en)
 - [![GitHub](https://img.shields.io/badge/GitHub-Profile-black?logo=github)](https://github.com/NinaNusb)
-- [![Bluesky](https://img.shields.io/badge/GitHub-Profile-black?logo=bluesky)]([https://github.com/NinaNusb](https://bsky.app/profile/nina-nusbaumer.bsky.social))
+- [![Bluesky](https://img.shields.io/badge/BlueSky-Profile-black?logo=bluesky)](https://bsky.app/profile/nina-nusbaumer.bsky.social)
 
 
