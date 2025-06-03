@@ -1,25 +1,32 @@
 # Home page
 
 ## About Me
-I am a PhD student specializing in computational psycholinguistics and machine learning. My research focuses on human-inspired sentence processing in language models. I am passionate about discovering more about the intricate system of language and try to model it using AI's state-of-the-art models. My PhD is part of the ANR-funded project [COMPO](https://anr-compo.github.io) and I work at the [Laboratoire de Linguistique Formelle (LLF)](http://www.llf.cnrs.fr/fr/presentation), [Université Paris Cité](https://u-paris.fr) under the supervision of [Benoît Crabbé](https://scholar.google.com/citations?user=9vyYVd0AAAAJ&hl=fr&oi=ao) and [Guillaume Wisniewski](https://scholar.google.com/citations?user=knVG9GIAAAAJ&hl=fr&oi=ao).
+I am a PhD student specializing in computational psycholinguistics and machine learning. My research focuses on human-inspired sentence processing in (large) language models. I am particularly interested in exploring the extent to which these models align with human cognition, with the broader goal of leveraging them to deepen our understanding of human language and language impairments. I work at the [Laboratoire de Linguistique Formelle (LLF), CNRS(http://www.llf.cnrs.fr/fr/presentation), at [Université Paris Cité](https://u-paris.fr) under the supervision of [Benoît Crabbé](https://scholar.google.com/citations?user=9vyYVd0AAAAJ&hl=fr&oi=ao) and [Guillaume Wisniewski](https://scholar.google.com/citations?user=knVG9GIAAAAJ&hl=fr&oi=ao). My PhD is part of the ANR-funded project [COMPO](https://anr-compo.github.io) where, together with other research groups, we explore ways to embed inductive biases related to compositionality and memory constraints in language models, in order to design models that are more efficient, using less data and fewer computational resources.
 
 ## Education
-- PhD in Computational Psycholinguistics, Université Paris Cité, LLF, CNRS
-- MA (Res) in Computational Linguistics, Université Paris Cité, France
-- MA (Res) in Multilingual Communication, Université de Liège, Belgium & Universidad Complutense de Madrid, Spain
-- BA in Philological Studies, Aix-Marseille Université, France & Universität Leipzig, Germany
+- PhD in Computational Psycholinguistics, Université Paris Cité, LLF, CNRS, 🇫🇷
+  Bridging cognitive science and machine learning, my doctoral work focuses on modeling human-like sentence processing in language models.
+- MA (Res) in Computational Linguistics, Université Paris Cité, 🇫🇷
+  This program strengthened my technical foundation in NLP and machine learning, laying the groundwork for my current research.
+- MA (Res) in Multilingual Communication, Université de Liège, 🇧🇪 & Universidad Complutense de Madrid, 🇪🇸
+  Focused on English, German, and Spanish linguistics, philology, and discourse analysis, this program also offered training in communication strategy and entrepreneurial skills — broadening both my academic and professional horizons.
+- BA in Philological Studies, Aix-Marseille Université, 🇫🇷 & Universität Leipzig, 🇩🇪
+  I began with a strong foundation in the structure, history, and diversity of languages, developed through immersion in both Romance and Germanic philologies.
 
 ## Research Interests
 - Human sentence processing
 - Cognitive science 
 - Language Model Interpretability
-- Psycholinguistics and cognitive neuroscience of language 
+- Psycholinguistics and cognitive neuroscience of language
 
-## Communications (with peer-reviewed abstract)
-- Shafiabadi, N., **Nusbaumer, N.**, Bonami, O., _Assessing the import of morphology in gender assignment: A computational study of French_, [LLcD](https://llcd2024.sciencesconf.org), 2024.
+## Peer-reviewed publications
+- [Accepted] **Nusbaumer, N.**, Wisniewski, G., Crabbé, B., 2025. _Évaluer la capacité des transformeurs à distinguer les significations compositionnelles et idiomatiques d'une même expression_, [TALN](https://coria-taln-2025.lis-lab.fr).
+
+## Conference talk (with peer-reviewed abstract)
+- [Presentation] Shafiabadi, N., **Nusbaumer, N.**, Bonami, O., 2024. _Assessing the import of morphology in gender assignment: A computational study of French_, [LLcD](https://llcd2024.sciencesconf.org).
 
 ## Research Stays
-- Visiting researcher at Computational Linguistics and Linguistic Theory ([COLT](https://www.upf.edu/web/colt)), Universitat Pompeu Fabra, Barcelona, Spain (January 2025 - ) 
+- Visiting researcher at Computational Linguistics and Linguistic Theory ([COLT](https://www.upf.edu/web/colt)), Universitat Pompeu Fabra, Barcelona, 🇪🇸 (January 2025 - ) 
 
 ## Ongoing Collaboration
 - Collaborating with [Adele Goldberg](https://scholar.google.com/citations?user=aK42DkQAAAAJ&hl=fr&oi=ao).
@@ -28,5 +35,6 @@ I am a PhD student specializing in computational psycholinguistics and machine l
 - **Email:** first.last@gmail.com
 - [![LinkedIn](https://img.shields.io/badge/LinkedIn-Profile-blue?logo=linkedin)](https://fr.linkedin.com/in/nina-nusbaumer-752aab182/en)
 - [![GitHub](https://img.shields.io/badge/GitHub-Profile-black?logo=github)](https://github.com/NinaNusb)
+- [![Bluesky](https://img.shields.io/badge/GitHub-Profile-black?logo=bluesky)]([https://github.com/NinaNusb](https://bsky.app/profile/nina-nusbaumer.bsky.social))
 
 
