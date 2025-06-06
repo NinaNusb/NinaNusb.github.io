@@ -4,13 +4,17 @@
 I am a PhD student specializing in computational psycholinguistics and machine learning. My research focuses on human-inspired sentence processing in (large) language models. I am particularly interested in exploring the extent to which these models align with human cognition, with the broader goal of leveraging them to deepen our understanding of human language and language impairments. I work at the [Laboratoire de Linguistique Formelle (LLF), CNRS](http://www.llf.cnrs.fr/fr/presentation), at [Université Paris Cité](https://u-paris.fr) under the supervision of [Benoît Crabbé](https://scholar.google.com/citations?user=9vyYVd0AAAAJ&hl=fr&oi=ao) and [Guillaume Wisniewski](https://scholar.google.com/citations?user=knVG9GIAAAAJ&hl=fr&oi=ao). My PhD is part of the ANR-funded project [COMPO](https://anr-compo.github.io) where, together with other research groups, we explore ways to embed inductive biases related to compositionality and memory constraints in language models, in order to design models that are more efficient, using less data and fewer computational resources.
 
 ## Education
-- **PhD in Computational Psycholinguistics**, Université Paris Cité, LLF, CNRS, 🇫🇷 <br>
+- **PhD in Computational Psycholinguistics** <br>
+  _Université Paris Cité, LLF, CNRS,_ 🇫🇷 <br>
   Bridging cognitive science and machine learning, my doctoral work focuses on modeling human-like sentence processing in language models.
-- **MA (Res) in Computational Linguistics**, Université Paris Cité, 🇫🇷<br>
+- **MA (Res) in Computational Linguistics** <br>
+  _Université Paris Cité,_ 🇫🇷<br>
   This program strengthened my technical foundation in NLP and machine learning, laying the groundwork for my current research.
-- **MA (Res) in Multilingual Communication**, Université de Liège, 🇧🇪 & Universidad Complutense de Madrid, 🇪🇸<br>
+- **MA (Res) in Multilingual Communication** <br>
+  _Université de Liège, 🇧🇪 & Universidad Complutense de Madrid,_ 🇪🇸<br>
   Focused on English, German, and Spanish linguistics, philology, and discourse analysis, this program also offered training in communication strategy and entrepreneurial skills — broadening both my academic and professional horizons.
-- **BA in Philological Studies**, Aix-Marseille Université, 🇫🇷 & Universität Leipzig, 🇩🇪<br>
+- **BA in Philological Studies** <br>
+  _Aix-Marseille Université, 🇫🇷 & Universität Leipzig,_🇩🇪<br>
   I began with a strong foundation in the structure, history, and diversity of languages, developed through immersion in both Romance and Germanic philologies.
 
 ## Research Interests
