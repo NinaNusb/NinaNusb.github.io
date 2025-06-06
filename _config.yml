@@ -1,7 +1,10 @@
-theme: jekyll-theme-minimal
+
 title: Nina Nusbaumer
 logo: /assets/img/NN.png
 description: >
   1st-year PhD student <br>
   👩🏻‍🎓 Université Paris Cité <br>
   📍Currently in Barcelona
+
+show_downloads: true
+theme: jekyll-theme-minimal
