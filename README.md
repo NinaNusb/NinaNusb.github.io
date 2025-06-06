@@ -14,7 +14,7 @@ I am a PhD student specializing in computational psycholinguistics and machine l
   _Université de Liège, 🇧🇪 & Universidad Complutense de Madrid,_ 🇪🇸<br>
   Focused on English, German, and Spanish linguistics, philology, and discourse analysis, this program also offered training in communication strategy and entrepreneurial skills — broadening both my academic and professional horizons.
 - **BA in Philological Studies** <br>
-  _Aix-Marseille Université, 🇫🇷 & Universität Leipzig,_🇩🇪<br>
+  _Aix-Marseille Université,_ 🇫🇷 & _Universität Leipzig_,🇩🇪<br>
   I began with a strong foundation in the structure, history, and diversity of languages, developed through immersion in both Romance and Germanic philologies.
 
 ## Research Interests
