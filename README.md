@@ -5,7 +5,7 @@ I am a PhD student specializing in computational psycholinguistics and machine l
 
 ## Education
 - **PhD in Computational Psycholinguistics** <br>
-  _Université Paris Cité, LLF, CNRS,_ 🇫🇷 <br>
+  _LLF, CNRS, Université Paris Cité,_ 🇫🇷 <br>
   Bridging cognitive science and machine learning, my doctoral work focuses on modeling human-like sentence processing in language models.
 - **MA (Res) in Computational Linguistics** <br>
   _Université Paris Cité,_ 🇫🇷<br>
