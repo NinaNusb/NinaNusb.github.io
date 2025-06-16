@@ -18,9 +18,8 @@ I am a PhD student specializing in computational psycholinguistics and machine l
   I began with a strong foundation in the structure, history, and diversity of languages, developed through immersion in both Romance and Germanic philologies.
 
 ## Research Interests
-- Human sentence processing
-- Cognitive science 
-- Language Model Interpretability
+- Human and artificial language processing
+- Language model interpretability
 - Psycholinguistics and cognitive neuroscience of language
 
 ## Peer-reviewed publications
