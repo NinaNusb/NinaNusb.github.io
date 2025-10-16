@@ -36,7 +36,7 @@ I am a PhD student specializing in computational psycholinguistics and machine l
 ## Peer-reviewed publications
 - [Published] **Nusbaumer, N.**, Wisniewski, G., Crabbé, B., 2025. _Évaluer la capacité des transformeurs à distinguer les significations compositionnelles et idiomatiques d'une même expression_, [TALN](https://coria-taln-2025.lis-lab.fr)   [*pdf*](https://aclanthology.org/2025.jeptalnrecital-taln.22/).
 
-## Conference talk (with peer-reviewed abstract) and poster presentations
+## Conference talk and poster presentations (with peer-reviewed abstract or paper)
 - [Poster] **Nusbaumer, N.**, Wisniewski, G., Crabbé, B., 2025. _Évaluer la capacité des transformeurs à distinguer les significations compositionnelles et idiomatiques d'une même expression_, [TALN](https://coria-taln-2025.lis-lab.fr) 
 - [Presentation] Shafiabadi, N., **Nusbaumer, N.**, Bonami, O., 2024. _Assessing the import of morphology in gender assignment: A computational study of French_, [LLcD](https://llcd2024.sciencesconf.org).
 
