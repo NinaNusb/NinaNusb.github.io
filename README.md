@@ -35,6 +35,8 @@ I am a PhD student specializing in computational psycholinguistics and machine l
 - Psycholinguistics and cognitive neuroscience of language
 
 ## Peer-reviewed publications
+[![Google Scholar](https://img.shields.io/badge/Google%20Scholar-Profile-4285F4?logo=google-scholar&logoColor=white)](https://scholar.google.com/citations?user=r0cxvlsAAAAJ&hl=fr&oi=ao)
+
 - [Published] **Nusbaumer, N.**, Wisniewski, G., Crabbé, B., 2025. _Évaluer la capacité des transformeurs à distinguer les significations compositionnelles et idiomatiques d'une même expression_, [TALN](https://coria-taln-2025.lis-lab.fr)   [*pdf*](https://aclanthology.org/2025.jeptalnrecital-taln.22/).
 
 ## Conference talk and poster presentations (with peer-reviewed abstract or paper)
