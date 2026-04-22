@@ -1,0 +1,1188 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Nina Nusbaumer</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400;0,600;1,400&family=Source+Serif+4:ital,opsz,wght@0,8..60,300;0,8..60,400;1,8..60,300&family=JetBrains+Mono:wght@400;500&display=swap" rel="stylesheet">
+  <style>
+    *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+
+    :root {
+      --cream: #f5f0e8;
+      --cream-dark: #ede6d6;
+      --ink: #1a1410;
+      --ink-light: #4a3f35;
+      --ink-faint: #8a7c6e;
+      --accent: #7c4a2d;
+      --accent-light: #c4845a;
+      --rule: #d4c8b8;
+      --mono: 'JetBrains Mono', monospace;
+    }
+
+    html { scroll-behavior: smooth; }
+
+    body {
+      background: var(--cream);
+      color: var(--ink);
+      font-family: 'Source Serif 4', Georgia, serif;
+      font-size: 17px;
+      line-height: 1.75;
+      font-weight: 300;
+      overflow-x: hidden;
+    }
+
+    /* ── NAV ── */
+    nav {
+      position: fixed;
+      top: 0; left: 0; right: 0;
+      z-index: 100;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      padding: 1.2rem 4rem;
+      background: rgba(245, 240, 232, 0.92);
+      backdrop-filter: blur(12px);
+      border-bottom: 1px solid var(--rule);
+    }
+
+    .nav-name {
+      font-family: 'Playfair Display', serif;
+      font-size: 1.05rem;
+      font-weight: 400;
+      letter-spacing: 0.02em;
+      color: var(--ink);
+      text-decoration: none;
+    }
+
+    .nav-links {
+      display: flex;
+      gap: 1.8rem;
+      list-style: none;
+    }
+
+    .nav-links a {
+      font-family: var(--mono);
+      font-size: 0.68rem;
+      letter-spacing: 0.1em;
+      text-transform: uppercase;
+      color: var(--ink-light);
+      text-decoration: none;
+      transition: color 0.2s;
+    }
+
+    .nav-links a:hover { color: var(--accent); }
+
+    /* ── HERO ── */
+    .hero {
+      min-height: 100vh;
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      padding-top: 5rem;
+    }
+
+    .hero-text {
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      padding: 6rem 4rem 6rem 6rem;
+      animation: fadeInLeft 0.9s ease both;
+    }
+
+    .hero-eyebrow {
+      font-family: var(--mono);
+      font-size: 0.68rem;
+      letter-spacing: 0.18em;
+      text-transform: uppercase;
+      color: var(--accent);
+      margin-bottom: 1.5rem;
+      display: flex;
+      align-items: center;
+      gap: 0.8rem;
+    }
+
+    .hero-eyebrow::after {
+      content: '';
+      display: block;
+      width: 40px;
+      height: 1px;
+      background: var(--accent-light);
+    }
+
+    h1 {
+      font-family: 'Playfair Display', serif;
+      font-size: clamp(3rem, 5vw, 4.8rem);
+      font-weight: 400;
+      line-height: 1.1;
+      letter-spacing: -0.01em;
+      margin-bottom: 1.8rem;
+      color: var(--ink);
+    }
+
+    h1 em {
+      font-style: italic;
+      color: var(--accent);
+    }
+
+    .hero-desc {
+      font-size: 1.08rem;
+      color: var(--ink-light);
+      line-height: 1.8;
+      max-width: 42ch;
+      margin-bottom: 2.5rem;
+    }
+
+    .hero-tags {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 0.6rem;
+      margin-bottom: 3rem;
+    }
+
+    .tag {
+      font-family: var(--mono);
+      font-size: 0.65rem;
+      letter-spacing: 0.1em;
+      text-transform: uppercase;
+      padding: 0.35rem 0.85rem;
+      border: 1px solid var(--rule);
+      color: var(--ink-faint);
+      border-radius: 2px;
+      background: transparent;
+      transition: all 0.2s;
+    }
+
+    .tag:hover { border-color: var(--accent-light); color: var(--accent); }
+
+    .hero-links {
+      display: flex;
+      gap: 1rem;
+      flex-wrap: wrap;
+    }
+
+    .btn {
+      display: inline-flex;
+      align-items: center;
+      gap: 0.5rem;
+      font-family: var(--mono);
+      font-size: 0.7rem;
+      letter-spacing: 0.1em;
+      text-transform: uppercase;
+      text-decoration: none;
+      padding: 0.7rem 1.5rem;
+      border: 1px solid;
+      transition: all 0.22s;
+    }
+
+    .btn-primary { background: var(--ink); color: var(--cream); border-color: var(--ink); }
+    .btn-primary:hover { background: var(--accent); border-color: var(--accent); }
+    .btn-secondary { background: transparent; color: var(--ink-light); border-color: var(--rule); }
+    .btn-secondary:hover { border-color: var(--ink-light); color: var(--ink); }
+
+    /* ── HERO IMAGE ── */
+    .hero-image {
+      position: relative;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      padding: 6rem 5rem 6rem 2rem;
+      animation: fadeInRight 0.9s ease both;
+    }
+
+    .photo-frame {
+      position: relative;
+      width: 340px;
+      height: 420px;
+    }
+
+    .photo-frame::before {
+      content: '';
+      position: absolute;
+      inset: -14px -14px 14px 14px;
+      border: 1.5px solid var(--accent-light);
+      opacity: 0.5;
+      z-index: 0;
+    }
+
+    .photo-frame img {
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+      object-position: center top;
+      position: relative;
+      z-index: 1;
+      filter: sepia(8%) contrast(1.02);
+    }
+
+    /* Fallback placeholder when image fails */
+    .photo-frame .photo-placeholder {
+      width: 100%;
+      height: 100%;
+      background: var(--cream-dark);
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      justify-content: center;
+      color: var(--ink-faint);
+      font-family: var(--mono);
+      font-size: 0.65rem;
+      letter-spacing: 0.1em;
+      text-transform: uppercase;
+      gap: 0.8rem;
+      position: relative;
+      z-index: 1;
+      border: 1px solid var(--rule);
+    }
+
+    .photo-caption {
+      position: absolute;
+      bottom: -2.5rem;
+      right: 0;
+      font-family: var(--mono);
+      font-size: 0.6rem;
+      letter-spacing: 0.1em;
+      color: var(--ink-faint);
+      text-transform: uppercase;
+    }
+
+    /* ── AFFILIATION STRIP ── */
+    .affiliations {
+      border-top: 1px solid var(--rule);
+      border-bottom: 1px solid var(--rule);
+      padding: 1.2rem 6rem;
+      display: flex;
+      gap: 3rem;
+      align-items: center;
+      background: var(--cream-dark);
+      overflow-x: auto;
+    }
+
+    .affil-label {
+      font-family: var(--mono);
+      font-size: 0.6rem;
+      letter-spacing: 0.15em;
+      text-transform: uppercase;
+      color: var(--ink-faint);
+      white-space: nowrap;
+    }
+
+    .affil-items { display: flex; gap: 2.5rem; align-items: center; }
+    .affil-item { font-size: 0.82rem; color: var(--ink-light); white-space: nowrap; }
+    .affil-item span { color: var(--accent); font-weight: 400; }
+
+    /* ── SECTIONS ── */
+    section { padding: 6rem 6rem; }
+
+    .section-inner { max-width: 900px; margin: 0 auto; }
+
+    .section-header {
+      display: flex;
+      align-items: center;
+      gap: 1.5rem;
+      margin-bottom: 3.5rem;
+    }
+
+    .section-number {
+      font-family: var(--mono);
+      font-size: 0.65rem;
+      color: var(--accent);
+      letter-spacing: 0.1em;
+    }
+
+    h2 {
+      font-family: 'Playfair Display', serif;
+      font-size: 2rem;
+      font-weight: 400;
+      color: var(--ink);
+    }
+
+    .section-rule { flex: 1; height: 1px; background: var(--rule); }
+
+    /* ── NEWS ── */
+    #news { background: var(--cream); }
+
+    .news-list { display: flex; flex-direction: column; gap: 0; }
+
+    .news-item {
+      display: grid;
+      grid-template-columns: 160px 1fr;
+      gap: 2rem;
+      padding: 1.8rem 0;
+      border-bottom: 1px solid var(--rule);
+      align-items: start;
+      opacity: 0;
+      transform: translateY(12px);
+      transition: opacity 0.5s ease, transform 0.5s ease;
+    }
+
+    .news-item.visible { opacity: 1; transform: translateY(0); }
+
+    .news-date {
+      font-family: var(--mono);
+      font-size: 0.68rem;
+      letter-spacing: 0.1em;
+      color: var(--accent);
+      padding-top: 0.2rem;
+      text-transform: uppercase;
+    }
+
+    .news-text { color: var(--ink-light); font-size: 0.95rem; }
+    .news-text strong { color: var(--ink); font-weight: 400; }
+    .news-text em { font-style: italic; }
+
+    .news-location {
+      font-family: var(--mono);
+      font-size: 0.62rem;
+      letter-spacing: 0.1em;
+      color: var(--ink-faint);
+      margin-top: 0.3rem;
+      text-transform: uppercase;
+    }
+
+    /* ── ABOUT ── */
+    #about { background: var(--cream-dark); }
+
+    .about-body {
+      font-size: 1.05rem;
+      color: var(--ink-light);
+      max-width: 68ch;
+      line-height: 1.9;
+    }
+
+    .about-body a {
+      color: var(--accent);
+      text-decoration: underline;
+      text-underline-offset: 3px;
+      text-decoration-thickness: 1px;
+    }
+
+    .about-body p + p { margin-top: 1.2rem; }
+
+    /* ── RESEARCH ── */
+    #research { background: var(--cream); }
+
+    .interests-grid {
+      display: grid;
+      grid-template-columns: repeat(3, 1fr);
+      gap: 1.5px;
+      background: var(--rule);
+      margin-bottom: 4rem;
+      border: 1px solid var(--rule);
+    }
+
+    .interest-card {
+      background: var(--cream);
+      padding: 2.2rem 2rem;
+      transition: background 0.2s;
+    }
+
+    .interest-card:hover { background: var(--cream-dark); }
+
+    .interest-icon { font-size: 1.6rem; margin-bottom: 1rem; }
+
+    .interest-title {
+      font-family: 'Playfair Display', serif;
+      font-size: 1.05rem;
+      font-weight: 400;
+      margin-bottom: 0.5rem;
+      color: var(--ink);
+    }
+
+    .interest-desc { font-size: 0.85rem; color: var(--ink-faint); line-height: 1.7; }
+
+    /* ── PUBLICATIONS ── */
+    #publications { background: var(--cream-dark); }
+
+    .pub-list { display: flex; flex-direction: column; gap: 0; }
+
+    .pub-item {
+      padding: 2rem 0;
+      border-bottom: 1px solid var(--rule);
+      display: grid;
+      grid-template-columns: auto 1fr;
+      gap: 1.5rem;
+      align-items: start;
+      opacity: 0;
+      transform: translateY(10px);
+      transition: opacity 0.5s, transform 0.5s;
+    }
+
+    .pub-item.visible { opacity: 1; transform: translateY(0); }
+
+    .pub-badge {
+      font-family: var(--mono);
+      font-size: 0.6rem;
+      letter-spacing: 0.1em;
+      text-transform: uppercase;
+      padding: 0.3rem 0.7rem;
+      border: 1px solid var(--rule);
+      color: var(--ink-faint);
+      white-space: nowrap;
+      margin-top: 0.2rem;
+    }
+
+    .pub-badge.published {
+      border-color: var(--accent-light);
+      color: var(--accent);
+      background: rgba(124, 74, 45, 0.06);
+    }
+
+    .pub-badge.review {
+      border-color: #b8a060;
+      color: #8a6a20;
+      background: rgba(184,160,96,0.07);
+    }
+
+    .pub-badge.accepted {
+      border-color: #5a8a5a;
+      color: #3a6a3a;
+      background: rgba(90,138,90,0.07);
+    }
+
+    .pub-title {
+      font-family: 'Playfair Display', serif;
+      font-size: 1rem;
+      font-style: italic;
+      font-weight: 400;
+      color: var(--ink);
+      margin-bottom: 0.3rem;
+      line-height: 1.5;
+    }
+
+    .pub-authors { font-size: 0.85rem; color: var(--ink-light); margin-bottom: 0.3rem; }
+    .pub-authors strong { color: var(--ink); font-weight: 400; }
+
+    .pub-venue {
+      font-family: var(--mono);
+      font-size: 0.65rem;
+      letter-spacing: 0.08em;
+      color: var(--ink-faint);
+      text-transform: uppercase;
+    }
+
+    .pub-link {
+      display: inline-block;
+      margin-top: 0.5rem;
+      font-family: var(--mono);
+      font-size: 0.62rem;
+      letter-spacing: 0.1em;
+      text-transform: uppercase;
+      color: var(--accent);
+      text-decoration: none;
+    }
+
+    .pub-link:hover { text-decoration: underline; }
+
+    .pub-section-label {
+      padding: 0.8rem 0;
+      border-bottom: 1px solid var(--rule);
+      margin-top: 1.5rem;
+    }
+
+    .pub-section-label:first-child { margin-top: 0; }
+
+    .pub-section-label span {
+      font-family: var(--mono);
+      font-size: 0.62rem;
+      letter-spacing: 0.1em;
+      text-transform: uppercase;
+      color: var(--ink-faint);
+    }
+
+    /* ── CV SECTIONS (Experience, Training, etc.) ── */
+    #experience { background: var(--cream); }
+    #training-teaching { background: var(--cream-dark); }
+
+    .cv-block {
+      margin-bottom: 2.5rem;
+      padding-bottom: 2.5rem;
+      border-bottom: 1px solid var(--rule);
+      opacity: 0;
+      transform: translateY(10px);
+      transition: opacity 0.5s, transform 0.5s;
+    }
+
+    .cv-block:last-child { border-bottom: none; margin-bottom: 0; }
+    .cv-block.visible { opacity: 1; transform: translateY(0); }
+
+    .cv-block-header {
+      display: grid;
+      grid-template-columns: 1fr auto;
+      gap: 1rem;
+      align-items: baseline;
+      margin-bottom: 0.5rem;
+    }
+
+    .cv-role {
+      font-family: 'Playfair Display', serif;
+      font-size: 1rem;
+      font-weight: 400;
+      color: var(--ink);
+    }
+
+    .cv-role em { font-style: italic; color: var(--accent); }
+
+    .cv-meta {
+      font-family: var(--mono);
+      font-size: 0.62rem;
+      letter-spacing: 0.08em;
+      color: var(--ink-faint);
+      text-transform: uppercase;
+      text-align: right;
+      white-space: nowrap;
+    }
+
+    .cv-institution {
+      font-family: var(--mono);
+      font-size: 0.68rem;
+      letter-spacing: 0.08em;
+      color: var(--accent);
+      text-transform: uppercase;
+      margin-bottom: 0.6rem;
+    }
+
+    .cv-desc {
+      font-size: 0.9rem;
+      color: var(--ink-faint);
+      line-height: 1.75;
+      max-width: 65ch;
+    }
+
+    .cv-desc + .cv-desc { margin-top: 0.3rem; }
+
+    .cv-supervisor {
+      font-family: var(--mono);
+      font-size: 0.62rem;
+      letter-spacing: 0.08em;
+      color: var(--ink-faint);
+      margin-top: 0.5rem;
+    }
+
+    /* sub-section label within a cv section */
+    .cv-subsection {
+      font-family: var(--mono);
+      font-size: 0.6rem;
+      letter-spacing: 0.15em;
+      text-transform: uppercase;
+      color: var(--ink-faint);
+      margin-bottom: 1.5rem;
+      padding-bottom: 0.6rem;
+      border-bottom: 1px solid var(--rule);
+    }
+
+    /* ── EDUCATION ── */
+    #education { background: var(--cream); }
+
+    .edu-timeline {
+      position: relative;
+      padding-left: 2.5rem;
+    }
+
+    .edu-timeline::before {
+      content: '';
+      position: absolute;
+      left: 0; top: 8px; bottom: 8px;
+      width: 1px;
+      background: var(--rule);
+    }
+
+    .edu-item {
+      position: relative;
+      padding-bottom: 3rem;
+      opacity: 0;
+      transform: translateX(-8px);
+      transition: opacity 0.5s, transform 0.5s;
+    }
+
+    .edu-item.visible { opacity: 1; transform: translateX(0); }
+    .edu-item:last-child { padding-bottom: 0; }
+
+    .edu-dot {
+      position: absolute;
+      left: -2.5rem; top: 8px;
+      width: 8px; height: 8px;
+      border-radius: 50%;
+      background: var(--accent-light);
+      border: 2px solid var(--cream);
+      outline: 1px solid var(--accent-light);
+    }
+
+    .edu-degree {
+      font-family: 'Playfair Display', serif;
+      font-size: 1.05rem;
+      font-weight: 400;
+      color: var(--ink);
+      margin-bottom: 0.2rem;
+    }
+
+    .edu-institution {
+      font-family: var(--mono);
+      font-size: 0.68rem;
+      letter-spacing: 0.08em;
+      color: var(--accent);
+      text-transform: uppercase;
+      margin-bottom: 0.5rem;
+    }
+
+    .edu-desc {
+      font-size: 0.88rem;
+      color: var(--ink-faint);
+      line-height: 1.7;
+      max-width: 55ch;
+    }
+
+    /* ── CONTACT ── */
+    #contact { background: var(--ink); color: var(--cream); }
+    #contact .section-number { color: var(--accent-light); }
+    #contact h2 { color: var(--cream); }
+    #contact .section-rule { background: rgba(255,255,255,0.1); }
+
+    .contact-grid {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: 4rem;
+      align-items: start;
+    }
+
+    .contact-intro {
+      font-size: 1.2rem;
+      color: rgba(245,240,232,0.7);
+      line-height: 1.8;
+      max-width: 38ch;
+    }
+
+    .contact-intro a { color: var(--accent-light); text-decoration: underline; text-underline-offset: 3px; }
+
+    .social-links { display: flex; flex-direction: column; gap: 1rem; }
+
+    .social-link {
+      display: flex;
+      align-items: center;
+      gap: 1rem;
+      text-decoration: none;
+      padding: 1rem 1.2rem;
+      border: 1px solid rgba(255,255,255,0.1);
+      color: rgba(245,240,232,0.8);
+      font-size: 0.9rem;
+      transition: all 0.2s;
+    }
+
+    .social-link:hover {
+      border-color: var(--accent-light);
+      color: var(--cream);
+      background: rgba(196,132,90,0.08);
+    }
+
+    .social-link-icon {
+      font-family: var(--mono);
+      font-size: 0.6rem;
+      letter-spacing: 0.12em;
+      text-transform: uppercase;
+      color: var(--accent-light);
+      min-width: 70px;
+    }
+
+    /* ── FOOTER ── */
+    footer {
+      background: var(--ink);
+      border-top: 1px solid rgba(255,255,255,0.06);
+      padding: 1.5rem 6rem;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+    }
+
+    footer p {
+      font-family: var(--mono);
+      font-size: 0.6rem;
+      letter-spacing: 0.1em;
+      color: rgba(245,240,232,0.3);
+      text-transform: uppercase;
+    }
+
+    /* ── ANIMATIONS ── */
+    @keyframes fadeInLeft {
+      from { opacity: 0; transform: translateX(-24px); }
+      to   { opacity: 1; transform: translateX(0); }
+    }
+
+    @keyframes fadeInRight {
+      from { opacity: 0; transform: translateX(24px); }
+      to   { opacity: 1; transform: translateX(0); }
+    }
+
+    /* ── RESPONSIVE ── */
+    @media (max-width: 900px) {
+      nav { padding: 1rem 2rem; }
+      .nav-links { gap: 1rem; }
+      .nav-links a { font-size: 0.6rem; }
+      .hero { grid-template-columns: 1fr; }
+      .hero-text { padding: 3rem 2rem 2rem; }
+      .hero-image { padding: 2rem; justify-content: flex-start; }
+      .photo-frame { width: 260px; height: 320px; }
+      section { padding: 4rem 2rem; }
+      .affiliations { padding: 1.2rem 2rem; }
+      .interests-grid { grid-template-columns: 1fr; }
+      .contact-grid { grid-template-columns: 1fr; }
+      .cv-block-header { grid-template-columns: 1fr; }
+      .cv-meta { text-align: left; }
+      footer { padding: 1.5rem 2rem; flex-direction: column; gap: 0.5rem; text-align: center; }
+    }
+  </style>
+</head>
+<body>
+
+  <!-- NAV -->
+  <nav>
+    <a href="#" class="nav-name">Nina Nusbaumer</a>
+    <ul class="nav-links">
+      <li><a href="#news">News</a></li>
+      <li><a href="#about">About</a></li>
+      <li><a href="#research">Research</a></li>
+      <li><a href="#publications">Publications</a></li>
+      <li><a href="#experience">Experience</a></li>
+      <li><a href="#education">Education</a></li>
+      <li><a href="#contact">Contact</a></li>
+    </ul>
+  </nav>
+
+  <!-- HERO -->
+  <div class="hero">
+    <div class="hero-text">
+      <div class="hero-eyebrow">PhD Researcher</div>
+      <h1>Nina<br><em>Nusbaumer</em></h1>
+      <p class="hero-desc">
+        Exploring the extent to which (large) language models process language the way humans do — and how they can be used as plausible cognitive models.
+      </p>
+      <div class="hero-tags">
+        <span class="tag">Computational Psycholinguistics</span>
+        <span class="tag">Language Models</span>
+        <span class="tag">Cognitive Science</span>
+        <span class="tag">NLP</span>
+      </div>
+      <div class="hero-links">
+        <a href="https://scholar.google.com/citations?user=r0cxvlsAAAAJ&hl=fr&oi=ao" class="btn btn-primary" target="_blank">Google Scholar ↗</a>
+        <a href="#contact" class="btn btn-secondary">Get in touch</a>
+      </div>
+    </div>
+    <div class="hero-image">
+      <div class="photo-frame">
+        <img src="assets/img/NN.png" alt="Nina Nusbaumer"
+             onerror="this.style.display='none'; this.nextElementSibling.style.display='flex';">
+        <div class="photo-placeholder" style="display:none;">
+          <span style="font-size:2rem;">🧠</span>
+          <span>Nina Nusbaumer</span>
+        </div>
+        <div class="photo-caption">📍 Barcelona, Spain</div>
+      </div>
+    </div>
+  </div>
+
+  <!-- AFFILIATIONS -->
+  <div class="affiliations">
+    <span class="affil-label">Affiliations</span>
+    <div class="affil-items">
+      <span class="affil-item"><span>LLF, CNRS</span> — Université Paris Cité</span>
+      <span class="affil-item">Visited — <span>COLT, Universitat Pompeu Fabra</span></span>
+      <span class="affil-item">Project — <span>ANR COMPO</span></span>
+    </div>
+  </div>
+
+  <!-- NEWS -->
+  <section id="news">
+    <div class="section-inner">
+      <div class="section-header">
+        <span class="section-number">01</span>
+        <h2>News</h2>
+        <div class="section-rule"></div>
+      </div>
+      <div class="news-list">
+        <div class="news-item">
+          <div class="news-date">Dec 2025</div>
+          <div>
+            <div class="news-text">Presenting a new <strong>benchmark dataset</strong> for evaluating language models against human processing behavior at the <a href="https://cpl2025.sites.uu.nl/programme/" style="color:var(--accent);text-decoration:underline;text-underline-offset:3px;">Computational Psycholinguistic Meeting</a>.</div>
+            <div class="news-location">📍 Utrecht, Netherlands</div>
+          </div>
+        </div>
+        <div class="news-item">
+          <div class="news-date">Jul 2025</div>
+          <div>
+            <div class="news-text">Presenting <em>Évaluer la capacité des transformeurs à distinguer les significations compositionnelles et idiomatiques d'une même expression</em> at <a href="https://coria-taln-2025.lis-lab.fr" style="color:var(--accent);text-decoration:underline;text-underline-offset:3px;">TALN 2025</a>.</div>
+            <div class="news-location">📍 Marseille, France</div>
+          </div>
+        </div>
+        <div class="news-item">
+          <div class="news-date">Jun 2025</div>
+          <div>
+            <div class="news-text">Co-organizing the 2025 edition of <strong>REST-CL</strong> — REtreat for Students in Computational Linguistics.</div>
+            <div class="news-location">📍 Tarragona, Spain</div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ABOUT -->
+  <section id="about">
+    <div class="section-inner">
+      <div class="section-header">
+        <span class="section-number">02</span>
+        <h2>About Me</h2>
+        <div class="section-rule"></div>
+      </div>
+      <div class="about-body">
+        <p>I am a PhD student specializing in <strong>computational psycholinguistics</strong> and machine learning. My research focuses on human-inspired sentence processing in large language models — investigating the extent to which these models align with human cognition, with the broader goal of leveraging them to deepen our understanding of human language and language impairments.</p>
+        <p>I work at the <a href="http://www.llf.cnrs.fr/fr/presentation" target="_blank">Laboratoire de Linguistique Formelle (LLF), CNRS</a>, at <a href="https://u-paris.fr" target="_blank">Université Paris Cité</a>, under the supervision of <a href="https://scholar.google.com/citations?user=9vyYVd0AAAAJ" target="_blank">Benoît Crabbé</a> and <a href="https://scholar.google.com/citations?user=knVG9GIAAAAJ" target="_blank">Guillaume Wisniewski</a>.</p>
+        <p>My PhD is part of the ANR-funded project <a href="https://anr-compo.github.io" target="_blank">COMPO</a> where, together with other research groups, we explore ways to embed inductive biases related to compositionality and memory constraints in language models, in order to build models that are more efficient, using less data and fewer computational resources, and more cognitively plausible.</p>
+      </div>
+    </div>
+  </section>
+
+  <!-- RESEARCH INTERESTS -->
+  <section id="research">
+    <div class="section-inner">
+      <div class="section-header">
+        <span class="section-number">03</span>
+        <h2>Research Interests</h2>
+        <div class="section-rule"></div>
+      </div>
+      <div class="interests-grid">
+        <div class="interest-card">
+          <div class="interest-icon">🧠</div>
+          <div class="interest-title">Human &amp; Artificial Language Processing</div>
+          <div class="interest-desc">Comparing how humans and language models process sentences, with a focus on psycholinguistic predictors.</div>
+        </div>
+        <div class="interest-card">
+          <div class="interest-icon">🔍</div>
+          <div class="interest-title">Language Model Interpretability</div>
+          <div class="interest-desc">Understanding the internal representations of (large) language models and what they reveal about linguistic structure and meaning composition.</div>
+        </div>
+        <div class="interest-card">
+          <div class="interest-icon">💬</div>
+          <div class="interest-title">Psycholinguistics &amp; Cognitive Neuroscience of Language</div>
+          <div class="interest-desc">Using computational methods to shed light on language impairments and the neural substrates of language comprehension.</div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- PUBLICATIONS -->
+  <section id="publications">
+    <div class="section-inner">
+      <div class="section-header">
+        <span class="section-number">04</span>
+        <h2>Publications &amp; Presentations</h2>
+        <div class="section-rule"></div>
+      </div>
+
+      <div class="pub-list">
+
+        <!-- Peer-reviewed -->
+        <div class="pub-section-label"><span>Peer-reviewed publications</span></div>
+
+        <div class="pub-item">
+          <span class="pub-badge review">Under Review</span>
+          <div>
+            <div class="pub-title">A controlled reading time dataset for modeling human sentence processing difficulty</div>
+            <div class="pub-authors"><strong>Nusbaumer, N.</strong>, de-Dios-Flores, I., Bel, C., Pallier, C., Wisniewski, G., &amp; Crabbé, B.</div>
+            <div class="pub-venue">Under Review</div>
+          </div>
+        </div>
+
+        <div class="pub-item">
+          <span class="pub-badge accepted">Accepted</span>
+          <div>
+            <div class="pub-title">Assessing the import of morphology in gender assignment: A computational study of French</div>
+            <div class="pub-authors">Shafiabadi*, N., <strong>Nusbaumer*, N.</strong> &amp; Bonami*, O.</div>
+            <div class="pub-venue">Lexique Journal — 2026</div>
+          </div>
+        </div>
+
+        <div class="pub-item">
+          <span class="pub-badge published">Published</span>
+          <div>
+            <div class="pub-title">Évaluer la capacité des transformeurs à distinguer les significations compositionnelles et idiomatiques d'une même expression</div>
+            <div class="pub-authors"><strong>Nusbaumer, N.</strong>, Wisniewski, G., Crabbé, B.</div>
+            <div class="pub-venue">TALN 2025</div>
+            <a href="https://aclanthology.org/2025.jeptalnrecital-taln.22/" class="pub-link" target="_blank">PDF via ACL Anthology ↗</a>
+          </div>
+        </div>
+
+        <!-- Presentations -->
+        <div class="pub-section-label" style="margin-top:1rem;"><span>Conference presentations &amp; posters</span></div>
+
+        <div class="pub-item">
+          <span class="pub-badge">Poster</span>
+          <div>
+            <div class="pub-title">Évaluer la capacité des transformeurs à distinguer les significations compositionnelles et idiomatiques d'une même expression</div>
+            <div class="pub-authors"><strong>Nusbaumer, N.</strong>, Wisniewski, G., Crabbé, B.</div>
+            <div class="pub-venue">TALN 2025</div>
+          </div>
+        </div>
+
+        <div class="pub-item">
+          <span class="pub-badge">Talk</span>
+          <div>
+            <div class="pub-title">Assessing the import of morphology in gender assignment: A computational study of French</div>
+            <div class="pub-authors">Shafiabadi, N., <strong>Nusbaumer, N.</strong>, Bonami, O.</div>
+            <div class="pub-venue">LLcD 2024</div>
+          </div>
+        </div>
+
+      </div>
+    </div>
+  </section>
+
+  <!-- EXPERIENCE: Research Stays, Positions, Training, Teaching, Supervision, Service -->
+  <section id="experience">
+    <div class="section-inner">
+      <div class="section-header">
+        <span class="section-number">05</span>
+        <h2>Experience &amp; Activities</h2>
+        <div class="section-rule"></div>
+      </div>
+
+      <!-- Research Stay -->
+      <div class="cv-subsection">Research Stay</div>
+
+      <div class="cv-block">
+        <div class="cv-block-header">
+          <div class="cv-role"><em>Visiting PhD Researcher</em></div>
+          <div class="cv-meta">Barcelona, Spain · Jan 2025 – Jan 2026</div>
+        </div>
+        <div class="cv-institution">Computational Linguistics and Linguistic Theory (COLT) — Universitat Pompeu Fabra</div>
+        <div class="cv-supervisor">Supervision: Iria de-Dios-Flores</div>
+      </div>
+
+      <!-- Research Positions -->
+      <div class="cv-subsection" style="margin-top: 3rem;">Research Positions</div>
+
+      <div class="cv-block">
+        <div class="cv-block-header">
+          <div class="cv-role"><em>Research Intern</em> — Interpretability of Transformers' Encoding of Idiomaticity</div>
+          <div class="cv-meta">Paris, France · Feb – Jul 2024</div>
+        </div>
+        <div class="cv-institution">Laboratoire de Linguistique Formelle (LLF Lab)</div>
+        <div class="cv-desc">Exploration of the encoding of non- (or partially) compositional compound words in Transformer language models.</div>
+        <div class="cv-supervisor">Supervision: Benoît Crabbé &amp; Guillaume Wisniewski</div>
+      </div>
+
+      <div class="cv-block">
+        <div class="cv-block-header">
+          <div class="cv-role"><em>Research Assistant</em> — Discourse Analysis of Psychological Pain</div>
+          <div class="cv-meta">Paris, France · May – Aug 2023</div>
+        </div>
+        <div class="cv-institution">INSERM &amp; Lattice Lab</div>
+        <div class="cv-desc">Linguistic and phenomenological characterization of the psychological pain of depressed patients within the framework of an international multidisciplinary research project.</div>
+        <div class="cv-supervisor">Supervision: Astrid Chevance &amp; Laure Sarda</div>
+      </div>
+
+      <div class="cv-block">
+        <div class="cv-block-header">
+          <div class="cv-role"><em>Research Intern</em> — Gender Bias in Pretrained Language Models</div>
+          <div class="cv-meta">Paris, France · Mar – Apr 2023</div>
+        </div>
+        <div class="cv-institution">Laboratoire de Linguistique Formelle (LLF Lab)</div>
+        <div class="cv-desc">Programming of computational tasks aimed at analyzing gender biases in the pre-trained FlauBERT model based on psycholinguistic studies.</div>
+        <div class="cv-supervisor">Supervision: Heather Burnett</div>
+      </div>
+
+      <div class="cv-block">
+        <div class="cv-block-header">
+          <div class="cv-role"><em>Research Assistant</em> — Corpus Annotation in Syntax and Semantics</div>
+          <div class="cv-meta">Paris, France · Jun – Aug 2021</div>
+        </div>
+        <div class="cv-institution">Lattice Lab</div>
+        <div class="cv-desc">Corpus annotation in syntax and semantics of quasi-synonymous verbal constructions, as well as the aspect of the verb <em>arriver</em> and its nominalization.</div>
+        <div class="cv-supervisor">Supervision: Laure Sarda</div>
+      </div>
+
+      <!-- Training -->
+      <div class="cv-subsection" style="margin-top: 3rem;">Training</div>
+
+      <div class="cv-block">
+        <div class="cv-block-header">
+          <div class="cv-role"><em>Lisbon Machine Learning School</em> (<a href="http://lxmls.it.pt/2025/" target="_blank" style="color:var(--accent);">LxMLS</a>)</div>
+          <div class="cv-meta">Lisbon, Portugal · Jul 2025</div>
+        </div>
+        <div class="cv-institution">Summer School — Instituto Superior Técnico</div>
+        <div class="cv-desc">Deepening of machine learning, deep learning, and natural language processing processes with hands-on coding labs and lectures by leading researchers.</div>
+      </div>
+
+      <div class="cv-block">
+        <div class="cv-block-header">
+          <div class="cv-role"><em>Experimental Grammar</em> (<a href="https://expgram2024.sciencesconf.org/?lang=en" target="_blank" style="color:var(--accent);">ExpGram</a>)</div>
+          <div class="cv-meta">Porquerolles, France · Jun 2024</div>
+        </div>
+        <div class="cv-institution">Summer School — Labex EFL &amp; PGSL</div>
+        <div class="cv-desc">Experimental methods, large-scale corpus-based quantitative studies, novel approaches in language science, human processing, and performance by large language models.</div>
+      </div>
+
+      <div class="cv-block">
+        <div class="cv-block-header">
+          <div class="cv-role"><em>Specialization in Data &amp; Artificial Intelligence</em></div>
+          <div class="cv-meta">Lille, France · Jun – Aug 2022</div>
+        </div>
+        <div class="cv-institution">Summer School — Simplon</div>
+        <div class="cv-desc">Introduction to programming including Object-Oriented Programming, data analysis, and Machine Learning.</div>
+      </div>
+
+      <!-- Teaching -->
+      <div class="cv-subsection" style="margin-top: 3rem;">Teaching</div>
+
+      <div class="cv-block">
+        <div class="cv-block-header">
+          <div class="cv-role"><em>Introduction to Python Programming</em></div>
+          <div class="cv-meta">Université Paris Cité · 2025–2026</div>
+        </div>
+        <div class="cv-institution">Theoretical and Experimental Linguistics and Phonetics Master</div>
+      </div>
+
+      <!-- Supervision -->
+      <div class="cv-subsection" style="margin-top: 3rem;">Supervision</div>
+
+      <div class="cv-block">
+        <div class="cv-block-header">
+          <div class="cv-role"><strong>Anna Mikhneva</strong> — <em>Evaluating (L)LMs generalization capacities</em></div>
+          <div class="cv-meta">Master student · Mar – Jun 2026</div>
+        </div>
+        <div class="cv-institution">Université Paris Cité</div>
+        <div class="cv-supervisor">Co-supervisor: Benoît Crabbé</div>
+      </div>
+
+      <div class="cv-block">
+        <div class="cv-block-header">
+          <div class="cv-role"><strong>Yannick Brenning</strong> — <em>Artificial dataset generation using a PCFG and LLM prompting</em></div>
+          <div class="cv-meta">Master student · Jul – Dec 2025</div>
+        </div>
+        <div class="cv-institution">Leipzig University</div>
+        <div class="cv-supervisor">Co-supervisor: Benoît Crabbé</div>
+      </div>
+
+      <!-- Service -->
+      <div class="cv-subsection" style="margin-top: 3rem;">Service</div>
+
+      <div class="cv-block">
+        <div class="cv-block-header">
+          <div class="cv-role"><em>Scientific Council Member</em>, Linguistics Faculty</div>
+          <div class="cv-meta">Université Paris Cité · 2025–2027</div>
+        </div>
+      </div>
+
+      <div class="cv-block">
+        <div class="cv-block-header">
+          <div class="cv-role"><em>Master–PhD Mentoring Program Organizer</em></div>
+          <div class="cv-meta">Université Paris Cité · 2026</div>
+        </div>
+      </div>
+
+    </div>
+  </section>
+
+  <!-- EDUCATION -->
+  <section id="education">
+    <div class="section-inner">
+      <div class="section-header">
+        <span class="section-number">06</span>
+        <h2>Education</h2>
+        <div class="section-rule"></div>
+      </div>
+      <div class="edu-timeline">
+        <div class="edu-item">
+          <div class="edu-dot"></div>
+          <div class="edu-degree">PhD in Computational Psycholinguistics</div>
+          <div class="edu-institution">LLF, CNRS — Université Paris Cité 🇫🇷</div>
+          <div class="edu-desc">Bridging cognitive science and machine learning, my doctoral work focuses on modeling human-like sentence processing in language models.</div>
+        </div>
+        <div class="edu-item">
+          <div class="edu-dot"></div>
+          <div class="edu-degree">MA (Res) in Computational Linguistics</div>
+          <div class="edu-institution">Université Paris Cité 🇫🇷</div>
+          <div class="edu-desc">Strengthened my technical foundation in NLP and machine learning, laying the groundwork for my current research.</div>
+        </div>
+        <div class="edu-item">
+          <div class="edu-dot"></div>
+          <div class="edu-degree">MA (Res) in Multilingual Communication</div>
+          <div class="edu-institution">Université de Liège 🇧🇪 &amp; Universidad Complutense de Madrid 🇪🇸</div>
+          <div class="edu-desc">Focused on English, German, and Spanish linguistics, philology, and discourse analysis, with training in communication strategy and entrepreneurial skills.</div>
+        </div>
+        <div class="edu-item">
+          <div class="edu-dot"></div>
+          <div class="edu-degree">BA in Philological Studies</div>
+          <div class="edu-institution">Aix-Marseille Université 🇫🇷 &amp; Universität Leipzig 🇩🇪</div>
+          <div class="edu-desc">A strong foundation in the structure, history, and diversity of languages through immersion in Romance and Germanic philologies.</div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- CONTACT -->
+  <section id="contact">
+    <div class="section-inner">
+      <div class="section-header">
+        <span class="section-number">07</span>
+        <h2>Contact</h2>
+        <div class="section-rule"></div>
+      </div>
+      <div class="contact-grid">
+        <div>
+          <p class="contact-intro">Interested in my work or want to collaborate? Feel free to reach out via email or connect on social media.</p>
+        </div>
+        <div class="social-links">
+          <a href="mailto:first.last@gmail.com" class="social-link">
+            <span class="social-link-icon">Email</span>
+            first.last@gmail.com
+          </a>
+          <a href="https://fr.linkedin.com/in/nina-nusbaumer-752aab182/en" class="social-link" target="_blank">
+            <span class="social-link-icon">LinkedIn</span>
+            nina-nusbaumer
+          </a>
+          <a href="https://github.com/NinaNusb" class="social-link" target="_blank">
+            <span class="social-link-icon">GitHub</span>
+            NinaNusb
+          </a>
+          <a href="https://bsky.app/profile/nina-nusbaumer.bsky.social" class="social-link" target="_blank">
+            <span class="social-link-icon">Bluesky</span>
+            nina-nusbaumer.bsky.social
+          </a>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- FOOTER -->
+  <footer>
+    <p>© 2025 Nina Nusbaumer</p>
+    <p>LLF, CNRS — Université Paris Cité</p>
+  </footer>
+
+  <script>
+    // Scroll-triggered fade-ins
+    const observer = new IntersectionObserver((entries) => {
+      entries.forEach((entry, i) => {
+        if (entry.isIntersecting) {
+          setTimeout(() => entry.target.classList.add('visible'), i * 80);
+          observer.unobserve(entry.target);
+        }
+      });
+    }, { threshold: 0.08 });
+
+    document.querySelectorAll('.news-item, .pub-item, .edu-item, .cv-block').forEach(el => observer.observe(el));
+
+    // Active nav highlighting
+    const sections = document.querySelectorAll('section[id]');
+    const navLinks = document.querySelectorAll('.nav-links a');
+
+    window.addEventListener('scroll', () => {
+      let current = '';
+      sections.forEach(s => {
+        if (window.scrollY >= s.offsetTop - 120) current = s.id;
+      });
+      navLinks.forEach(a => {
+        a.style.color = a.getAttribute('href') === '#' + current ? 'var(--accent)' : '';
+      });
+    });
+  </script>
+</body>
+</html>
