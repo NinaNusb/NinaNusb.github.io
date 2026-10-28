@@ -235,15 +235,26 @@ const links=[...document.querySelectorAll('nav ul a')];
 const secs=[...document.querySelectorAll('main section')];
 addEventListener('scroll',()=>{let c='';secs.forEach(s=>{if(scrollY>=s.offsetTop-120)c=s.id});links.forEach(a=>a.classList.toggle('on',a.getAttribute('href')==='#'+c))},{passive:true});
 
-// Umami analytics: link clicks, section views, time on page, scroll depth
-const t=(n,d)=>{if(typeof umami!=='undefined')umami.track(n,d)};
-document.addEventListener('click',e=>{const a=e.target.closest('a[href]');if(a)t(a.closest('nav')?'nav-click':'link-click',{label:a.textContent.trim().slice(0,60),href:a.getAttribute('href')})});
-const seen=new Set();
-const so=new IntersectionObserver(es=>es.forEach(x=>{if(x.isIntersecting&&!seen.has(x.target.id)){seen.add(x.target.id);t('section-viewed',{section:x.target.id})}}),{threshold:.25});
-secs.forEach(s=>so.observe(s));
-[30,60,120,300].forEach(s=>setTimeout(()=>t('time-on-page',{seconds:s}),s*1000));
-const depth=new Set();
-addEventListener('scroll',()=>{const p=Math.round((scrollY+innerHeight)/document.body.scrollHeight*100);[25,50,75,100].forEach(m=>{if(p>=m&&!depth.has(m)){depth.add(m);t('scroll-depth',{percent:m})}})},{passive:true});
+// Umami analytics: track clicks on anything offered on the site (papers, slides, posters, code, social profiles, email, outbound links).
+// In-page navigation (#anchors) is not tracked.
+const track=(n,d)=>{if(typeof umami!=='undefined')umami.track(n,d)};
+const onLinkClick=e=>{
+  const a=e.target.closest('a[href]');
+  if(!a)return;
+  const href=a.getAttribute('href');
+  if(href.startsWith('#'))return;
+  const label=(a.getAttribute('aria-label')||a.textContent).trim().slice(0,60);
+  const item=a.closest('.row');
+  const context=item?(item.querySelector('.cite, h4')||item).textContent.trim().replace(/\s+/g,' ').slice(0,100):'';
+  let type='link';
+  if(href.startsWith('mailto:'))type='email';
+  else if(a.closest('.social'))type='social';
+  else if(/\.pdf($|\?)/i.test(href))type='file';
+  else if(a.closest('.btns'))type='resource';
+  track(type+'-click',{label,href,context});
+};
+document.addEventListener('click',onLinkClick);
+document.addEventListener('auxclick',onLinkClick);
 </script>
 </body>
 </html>
