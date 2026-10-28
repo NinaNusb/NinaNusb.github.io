@@ -11,7 +11,7 @@
 <script defer src="https://cloud.umami.is/script.js" data-website-id="3f5044b9-a723-4a21-b0c1-dca099cc0019"></script>
 <style>
 *,*::before,*::after{box-sizing:border-box;margin:0;padding:0}
-:root{--bg:#f6f7fb;--card:#fff;--ink:#101828;--muted:#475467;--line:#d9dde7;--accent:#3434c8;--accent-dark:#22229a;--arc:#e4572e}
+:root{--bg:#f4f7f5;--card:#fff;--ink:#14201a;--muted:#4a5a52;--line:#d6ddd9;--accent:#1f6f50;--accent-dark:#14503a;--arc:#b45309}
 html{scroll-behavior:smooth;scroll-padding-top:5rem}
 body{background:var(--bg);color:var(--ink);font:400 1.1875rem/1.65 'Atkinson Hyperlegible',system-ui,sans-serif}
 a{color:var(--accent);text-underline-offset:3px}
@@ -34,15 +34,9 @@ nav ul a:hover,nav ul a.on{color:var(--ink);border-color:var(--accent)}
 h1{font-size:clamp(2.8rem,6vw,4.4rem);letter-spacing:-.02em;margin-bottom:.4rem}
 .role{font-size:1.3rem;color:var(--muted);margin-bottom:1.5rem}
 .lede{font-size:1.3rem;line-height:1.55;max-width:34em;margin-bottom:1.5rem}
-.fig{margin:0 0 1.75rem;overflow-x:auto}
-.fig svg{display:block;min-width:34rem;width:100%;height:auto}
-.fig .arc{fill:none;stroke:var(--arc);stroke-width:2}
-.fig .w{font:700 21px 'Bricolage Grotesque',sans-serif;fill:var(--ink);text-anchor:middle}
-.fig .l{font:400 14px 'Atkinson Hyperlegible',sans-serif;fill:var(--muted);text-anchor:middle}
-.fig figcaption{font-size:1rem;color:var(--muted);margin-top:.4rem}
 .legend{color:var(--muted);font-size:1rem}
 .chips{display:flex;flex-wrap:wrap;gap:.5rem;list-style:none;margin-bottom:2rem}
-.chips li{background:#e8eafb;color:#1c1c78;border-radius:999px;padding:.3rem .9rem;font-size:1rem}
+.chips li{background:#e2efe8;color:#14503a;border-radius:999px;padding:.3rem .9rem;font-size:1rem}
 .photo img{width:100%;aspect-ratio:4/5;object-fit:cover;object-position:center top;border-radius:1.25rem;display:block}
 .photo p{color:var(--muted);font-size:1rem;margin-top:.6rem}
 
@@ -51,7 +45,7 @@ h1{font-size:clamp(2.8rem,6vw,4.4rem);letter-spacing:-.02em;margin-bottom:.4rem}
 .btn{display:inline-block;font:700 1rem 'Atkinson Hyperlegible',sans-serif;text-decoration:none;padding:.55rem 1.15rem;border-radius:.6rem;border:2px solid var(--accent);background:var(--accent);color:#fff}
 .btn:hover{background:var(--accent-dark);border-color:var(--accent-dark);color:#fff}
 .btn.ghost{background:transparent;color:var(--accent)}
-.btn.ghost:hover{background:#e8eafb;color:var(--accent-dark)}
+.btn.ghost:hover{background:#e2efe8;color:var(--accent-dark)}
 .btn.sm{padding:.35rem .9rem;font-size:.95rem}
 
 /* sections */
@@ -96,22 +90,6 @@ footer .wrap{display:flex;justify-content:space-between;gap:1rem;flex-wrap:wrap}
     <h1>Nina Nusbaumer</h1>
     <p class="role">PhD student in computational psycholinguistics</p>
     <p class="lede">Exploring the extent to which (large) language models process language the way humans do, and how they can be used as plausible cognitive models.</p>
-    <figure class="fig"><svg viewBox="0 0 640 175" role="img" aria-label="Dependency parse of the sentence: The teacher who the students admired smiled. The subject teacher is linked to its verb smiled across a relative clause.">
-    <defs><marker id="ah" viewBox="0 0 10 10" refX="8" refY="5" markerWidth="7" markerHeight="7" orient="auto"><path d="M0 0L10 5L0 10z" fill="#e4572e"/></marker></defs>
-    <path class="arc" marker-end="url(#ah)" d="M115 132 Q77.5 104 40 132"/><text class="l" x="77.5" y="113">det</text>
-    <path class="arc" marker-end="url(#ah)" d="M520 132 Q317.5 -52 115 132"/><text class="l" x="317.5" y="35">nsubj</text>
-    <path class="arc" marker-end="url(#ah)" d="M425 132 Q270 0 115 132"/><text class="l" x="270" y="61">acl:relcl</text>
-    <path class="arc" marker-end="url(#ah)" d="M425 132 Q307.5 52 190 132"/><text class="l" x="307.5" y="87">obj</text>
-    <path class="arc" marker-end="url(#ah)" d="M330 132 Q290 104 250 132"/><text class="l" x="290" y="113">det</text>
-    <path class="arc" marker-end="url(#ah)" d="M425 132 Q377.5 84 330 132"/><text class="l" x="377.5" y="103">nsubj</text>
-    <text class="w" x="40" y="158">The</text>
-    <text class="w" x="115" y="158">teacher</text>
-    <text class="w" x="190" y="158">who</text>
-    <text class="w" x="250" y="158">the</text>
-    <text class="w" x="330" y="158">students</text>
-    <text class="w" x="425" y="158">admired</text>
-    <text class="w" x="520" y="158">smiled</text>
-    </svg><figcaption>Dependency parse of an example sentence: the subject and its verb are separated by a relative clause.</figcaption></figure>
     <ul class="chips" aria-label="Keywords">
       <li>Computational psycholinguistics</li><li>Sentence processing</li><li>Language models</li><li>Memory constraints</li>
       <li>Compositionality</li><li>Idiomaticity</li><li>Interpretability</li><li>Reading times</li>
@@ -146,7 +124,6 @@ footer .wrap{display:flex;justify-content:space-between;gap:1rem;flex-wrap:wrap}
 
 <section id="communications"><div class="wrap">
   <h2>Communications</h2>
-  <!-- To add a button: uncomment its line below and put the file in assets/files/ (or replace the href with a URL) -->
   <h3>Papers</h3>
   <div class="row"><div class="when">2026</div><div>
     <h4>StructuralCost: A controlled reading time dataset for modeling human sentence processing difficulty</h4>
@@ -154,7 +131,7 @@ footer .wrap{display:flex;justify-content:space-between;gap:1rem;flex-wrap:wrap}
     <p>Findings of EMNLP 2026</p>
     <div class="btns">
       <a class="btn sm" href="https://aclanthology.org/2026.findings-emnlp.1360/" target="_blank" rel="noopener">Paper</a>
-      <!-- <a class="btn sm ghost" href="assets/files/emnlp-poster.pdf">Poster</a> -->
+      <a class="btn sm ghost" href="assets/files/emnlp-poster.pdf" target="_blank" rel="noopener">Poster</a>
       <a class="btn sm ghost" href="https://doi.org/10.34847/nkl.7c467lyv" target="_blank" rel="noopener">Dataset</a>
       <a class="btn sm ghost" href="https://github.com/NinaNusb/lm-human-processing" target="_blank" rel="noopener">Code</a>
     </div></div></div>
@@ -165,7 +142,6 @@ footer .wrap{display:flex;justify-content:space-between;gap:1rem;flex-wrap:wrap}
     <p class="legend">* equal contribution</p>
     <div class="btns">
       <a class="btn sm" href="https://doi.org/10.54563/lexique.2262" target="_blank" rel="noopener">Paper</a>
-      <!-- <a class="btn sm ghost" href="CODE_URL">Code</a> -->
     </div></div></div>
   <div class="row"><div class="when">2025</div><div>
     <h4>Évaluer la capacité des transformeurs à distinguer les significations compositionnelles et idiomatiques d’une même expression</h4>
@@ -173,8 +149,7 @@ footer .wrap{display:flex;justify-content:space-between;gap:1rem;flex-wrap:wrap}
     <p>Proceedings of TALN 2025</p>
     <div class="btns">
       <a class="btn sm" href="https://aclanthology.org/2025.jeptalnrecital-taln.22/" target="_blank" rel="noopener">Paper</a>
-      <!-- <a class="btn sm ghost" href="assets/files/taln-poster.pdf">Poster</a> -->
-      <!-- <a class="btn sm ghost" href="CODE_URL">Code</a> -->
+      <a class="btn sm ghost" href="assets/files/taln-poster.pdf" target="_blank" rel="noopener">Poster</a>
     </div></div></div>
 
   <h3>Conference talks</h3>
@@ -183,8 +158,8 @@ footer .wrap{display:flex;justify-content:space-between;gap:1rem;flex-wrap:wrap}
     <div class="sub"><strong>Nina Nusbaumer</strong>, Corentin Bel, Iria de-Dios-Flores, Guillaume Wisniewski, Benoît Crabbé</div>
     <p>Computational Psycholinguistics Meeting (CPL), spotlight presentation</p>
     <div class="btns">
-      <!-- <a class="btn sm ghost" href="assets/files/cpl-slides.pdf">Slides</a> -->
-      <!-- <a class="btn sm ghost" href="assets/files/cpl-poster.pdf">Poster</a> -->
+      <a class="btn sm ghost" href="assets/files/cpl-slides.pdf" target="_blank" rel="noopener">Slides</a>
+      <a class="btn sm ghost" href="assets/files/cpl-poster.pdf" target="_blank" rel="noopener">Poster</a>
     </div></div></div>
   <div class="row"><div class="when">2024</div><div>
     <h4>Assessing the import of morphology in gender assignment: A computational study of French</h4>
@@ -192,7 +167,7 @@ footer .wrap{display:flex;justify-content:space-between;gap:1rem;flex-wrap:wrap}
     <p>Langues &amp; Langage à la croisée des Disciplines (LLcD)</p>
     <p class="legend">* equal contribution</p>
     <div class="btns">
-      <!-- <a class="btn sm ghost" href="assets/files/llcd-slides.pdf">Slides</a> -->
+      <a class="btn sm ghost" href="assets/files/llcd-slides.pdf" target="_blank" rel="noopener">Slides</a>
     </div></div></div>
 
   <h3>Invited talks</h3>
@@ -200,7 +175,7 @@ footer .wrap{display:flex;justify-content:space-between;gap:1rem;flex-wrap:wrap}
     <h4>Memory constraints in language models: towards human-like sentence processing</h4>
     <p>Lattice</p>
     <div class="btns">
-      <!-- <a class="btn sm ghost" href="assets/files/lattice-slides.pdf">Slides</a> -->
+      <a class="btn sm ghost" href="assets/files/lattice-slides.pdf" target="_blank" rel="noopener">Slides</a>
     </div></div></div>
 </div></section>
 
